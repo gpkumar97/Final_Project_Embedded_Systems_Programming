@@ -56,7 +56,7 @@ class CategoryMealsActivity : AppCompatActivity() {
             adapter=mealsListAdapter
         }
     }
-
+    
     private fun observeMealsLiveData() {
         categoryMvvm.observeMealsLivedata().observe(this, Observer { mealsList ->
             binding.categoryName.text= "${categoryName} : ${mealsList.size}"
